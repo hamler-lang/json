@@ -1,0 +1,19 @@
+module Data.Json
+  ( JsonText
+  , JsonTerm
+  , encode
+  , decode
+) where
+
+import Foreign (ffi1)
+
+type JsonText = Binary
+
+foreign import data JsonTerm :: Type
+
+decode :: JsonText -> JsonTerm
+decode s = ffi1 :jsx :decode
+
+encode :: JsonTerm -> JsonText
+encode = ffi1 :jsx :encode
+
