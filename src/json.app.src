@@ -1,0 +1,13 @@
+{application, json,
+ [{description, "Hamler JSON Parser"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, ['Data.Json']},
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.
